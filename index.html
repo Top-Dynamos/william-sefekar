@@ -117,6 +117,17 @@ nav a:hover{color:var(--teal)}
 
 /* Contact */
 .contact{background:var(--ink);color:#DEDACF;border-radius:4px;padding:52px 46px}
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px;list-style:none;margin:26px 0 0;padding:0;max-width:540px}
+.offers li{color:#DEDACF;font-size:.95rem;padding-left:18px;position:relative;min-width:0}
+.offers li::before{content:"\203A";position:absolute;left:0;color:#C9A878;font-weight:600}
+.reach{margin:30px 0 0;display:flex;flex-wrap:wrap;gap:8px 34px}
+.reach span{display:block;font-size:.68rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:#8C897F;margin-bottom:4px}
+.reach a,.reach b{color:#FBF8F1;font-weight:500;font-size:1.02rem;text-decoration:none}
+.reach a:hover{color:#C9A878}
+@media (max-width:560px){.offers{grid-template-columns:1fr}}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.btnrow .btn.ghost{margin-left:0}
+@media (max-width:560px){.btnrow .btn,.btnrow .btn.ghost{margin:0;display:block;width:100%;text-align:center}}
 .contact h2{color:#FBF8F1}
 .contact p{color:#B6B1A6;max-width:52ch}
 @media (max-width:560px){.contact{padding:34px 24px}}
@@ -277,10 +288,22 @@ footer a:hover{color:#fff}
       <span class="eyebrow" style="color:#C9A878">Contact</span>
       <h2 class="h2" style="color:#FBF8F1">Enquiries, bookings and speaking</h2>
       <p>For author events, classroom visits, speaking engagements or anything to do with the books, get in touch. His writing on his father and the family archive continues at Joe's Lifelong Legacy.</p>
-      <p style="margin-top:28px">
+      <ul class="offers">
+        <li>Motivational speaking</li>
+        <li>Educational classes</li>
+        <li>Special events</li>
+        <li>Fun programmes for all ages</li>
+      </ul>
+      <div class="reach">
+        <div><span>Booking</span><a href="tel:+17274925444">727 492 5444</a></div>
+        <div><span>Email</span><a href="mailto:sefiam18@gmail.com">sefiam18@gmail.com</a></div>
+        <div><span>Based in</span><b>Tampa Bay, Florida</b></div>
+      </div>
+      <div class="btnrow">
         <a class="btn" href="https://joeslifelonglegacy.com/" target="_blank" rel="noopener">Joe's Lifelong Legacy</a>
         <a class="btn ghost" href="https://www.youtube.com/@TheBillSefekarExperience" target="_blank" rel="noopener">YouTube</a>
-      </p>
+        <a class="btn ghost" href="https://www.instagram.com/billsefekar/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
   </div>
 </section>
