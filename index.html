@@ -44,6 +44,17 @@ a{color:var(--teal)}
 .lede{font-size:1.14rem;line-height:1.78;color:#44423D;max-width:64ch}
 section{padding:92px 0}
 section.tint{background:var(--paper-2)}
+.live{background:var(--teal);color:#DCEAE7}                 /* 7.66 on the teal */
+.live .eyebrow{color:#E4EEEC}                               /* 8.00 on the teal */
+.live h2{color:#FBF8F1;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin-bottom:10px}  /* 8.93 */
+.live .where{font-size:1.2rem;color:#FBF8F1;margin:0 0 6px}
+.live p.note{color:#DCEAE7;margin:0;max-width:52ch}
+.live .wrap{display:grid;grid-template-columns:auto 1fr;gap:54px;align-items:center}
+.live .cal{background:#FBF8F1;color:var(--teal);border-radius:4px;padding:22px 30px;text-align:center;min-width:150px}
+.live .cal .m{display:block;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.live .cal .d{display:block;font-family:var(--d);font-size:3.4rem;font-weight:600;line-height:1}
+.live .cal .y{display:block;font-size:.8rem;letter-spacing:.14em}
+@media (max-width:700px){.live .wrap{grid-template-columns:1fr;gap:26px}}
 
 /* Header */
 header{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:20}
@@ -146,7 +157,7 @@ footer a:hover{color:#fff}
 <header><div class="wrap">
   <a class="wordmark" href="#top">Bill Sefekar<span>Writer &middot; Teacher &middot; Musician</span></a>
   <nav>
-    <a href="#books">Books</a><a href="#television">Television</a><a href="#teaching">Teaching</a><a href="#community">Community</a><a href="#contact">Contact</a>
+    <a href="#books">Books</a><a href="#live">Live</a><a href="#television">Television</a><a href="#teaching">Teaching</a><a href="#community">Community</a><a href="#contact">Contact</a>
   </nav>
 </div></header>
 
@@ -228,6 +239,22 @@ footer a:hover{color:#fff}
       <p style="margin-top:22px"><a class="btn" href="https://www.youtube.com/@TheBillSefekarExperience" target="_blank" rel="noopener">Listen on YouTube</a></p>
     </div>
     <div class="frame"><img src="images/music.jpg" width="1600" height="900" alt="Bill Sefekar at his recording microphone" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="live" class="live">
+  <div class="wrap">
+    <div class="cal">
+      <span class="m">January</span>
+      <span class="d">17</span>
+      <span class="y">2027</span>
+    </div>
+    <div>
+      <span class="eyebrow">Next performance</span>
+      <h2>Sunday 17 January 2027</h2>
+      <p class="where">Wild Rover Brewing Company, Tampa</p>
+      <p class="note">An evening of the Mood Message Music he has been playing around Tampa Bay for years. Songs, and the stories that go with them.</p>
+    </div>
   </div>
 </section>
 
