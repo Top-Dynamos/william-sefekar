@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index, follow">
 <title>Bill Sefekar | Writer, Teacher and Musician</title>
-<meta name="description" content="William Sefekar is a writer, teacher and musician in the Tampa Bay area. Co-author of Light: Courage and Hope with Holocaust survivor Cantor William Hauben, author of American Dreamer, producer of 170 public access television shows, and still teaching. Next performance 17 January 2027.">>
+<meta name="description" content="William Sefekar is a writer, teacher and musician in the Tampa Bay area. Co-author of Light: Courage and Hope with Holocaust survivor Cantor William Hauben, author of American Dreamer, producer of 170 public access television shows, and still teaching. Next performance 17 January 2027.">
 <link rel="canonical" href="https://top-dynamos.github.io/william-sefekar/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Bill Sefekar | Writer, Teacher and Musician">
@@ -96,8 +96,22 @@ nav a:hover{color:var(--teal)}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,14,12,.95) 0%,rgba(13,14,12,.85) 45%,rgba(13,14,12,.55) 100%)}
 .hero .wrap{position:relative;z-index:2;padding-top:104px;padding-bottom:104px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
 .hero-portrait{align-self:end}
-.hero-portrait img{width:100%;max-width:360px;margin-left:auto;display:block;filter:drop-shadow(0 26px 44px rgba(0,0,0,.55))}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero-portrait img{max-width:260px;margin:0}}
+/* The cut out is clean on three sides but fully opaque along the bottom, which read as a
+   straight slice across his jacket. Fading the last fifth lets him sit in the scene instead
+   of being pasted on top of it. */
+.hero-portrait img{width:100%;max-width:380px;margin-left:auto;display:block;
+  filter:drop-shadow(0 26px 44px rgba(0,0,0,.55));
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 80%,rgba(0,0,0,.55) 92%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 0,#000 80%,rgba(0,0,0,.55) 92%,transparent 100%)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero-portrait img{max-width:260px;margin:0 auto}}
+/* On a phone the two hero buttons came out 153px and 346px wide, one narrow and one full
+   bleed, which looked like a mistake rather than a choice. Both are now full width and
+   stacked, and the portrait is centred instead of hanging off the left. */
+@media (max-width:575px){
+  .hero .btn{display:block;width:100%;text-align:center;margin:0 0 12px}
+  .hero .btn.ghost{margin-left:0;margin-bottom:0}
+  .hero-portrait img{margin:0 auto}
+}
 .hero .eyebrow{color:#C9A878}
 .hero h1{color:#FBF8F1;font-size:clamp(2.3rem,6vw,4rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:22px}
 .hero h1 em{font-style:italic;color:#D8C9A8}
