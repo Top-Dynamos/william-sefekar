@@ -19,7 +19,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23134E4A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' font-weight='600' fill='%23F7F3EA' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://top-dynamos.github.io/william-sefekar/#person","name":"William Sefekar","alternateName":"Bill Sefekar","jobTitle":"Writer, Teacher and Musician","url":"https://top-dynamos.github.io/william-sefekar/","address":{"@type":"PostalAddress","addressLocality":"Tampa Bay","addressRegion":"FL","addressCountry":"US"},"knowsAbout":["Writing","Teaching","Music","Holocaust remembrance","Community storytelling","Public access television"],"worksFor":{"@type":"EducationalOrganization","name":"Hillsborough County Public Schools"},"sameAs":["https://www.youtube.com/@TheBillSefekarExperience","https://joeslifelonglegacy.com/","https://www.instagram.com/billsefekar/"]},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#light","name":"Light: Courage and Hope","datePublished":"2010","author":[{"@id":"https://top-dynamos.github.io/william-sefekar/#person"},{"@type":"Person","name":"William Hauben"}],"about":"The ten nations whose people acted to save Jewish lives during the Holocaust"},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#dreamer","name":"American Dreamer: A Look Into the Life of My Father, Joe Baby","datePublished":"2017","isbn":"9780985965754","author":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#worked","name":"It Worked 4 Me","author":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"},"bookEdition":"In progress"},{"@type":"Event","@id":"https://top-dynamos.github.io/william-sefekar/#jan17","name":"Bill Sefekar live at Wild Rover Brewing Company","startDate":"2027-01-17","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Wild Rover Brewing Company","address":{"@type":"PostalAddress","addressLocality":"Tampa","addressRegion":"FL","addressCountry":"US"}},"performer":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}},{"@type":"PodcastEpisode","name":"TBCN Unplugged: The Bill Sefekar Experience","datePublished":"2026-05-14","url":"https://infoxvg.podbean.com/e/tbcn-unplugged-the-bill-sefekar-experience/","partOfSeries":{"@type":"PodcastSeries","name":"Tampa Bay Community Network Unplugged"},"about":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://top-dynamos.github.io/william-sefekar/#person","name":"William Sefekar","alternateName":"Bill Sefekar","jobTitle":"Writer, Teacher and Musician","url":"https://top-dynamos.github.io/william-sefekar/","address":{"@type":"PostalAddress","addressLocality":"Tampa Bay","addressRegion":"FL","addressCountry":"US"},"knowsAbout":["Writing","Teaching","Music","Holocaust remembrance","Community storytelling","Public access television"],"worksFor":{"@type":"EducationalOrganization","name":"Hillsborough County Public Schools"},"sameAs":["https://www.youtube.com/@TheBillSefekarExperience","https://joeslifelonglegacy.com/","https://www.instagram.com/billsefekar/"]},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#light","name":"Light: Courage and Hope","datePublished":"2010","author":[{"@id":"https://top-dynamos.github.io/william-sefekar/#person"},{"@type":"Person","name":"William Hauben"}],"about":"The ten nations whose people acted to save Jewish lives during the Holocaust"},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#dreamer","name":"American Dreamer: A Look Into the Life of My Father, Joe Baby","datePublished":"2017","isbn":"9780985965754","author":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}},{"@type":"Book","@id":"https://top-dynamos.github.io/william-sefekar/#worked","name":"It Worked 4 Me","author":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"},"bookEdition":"In progress"},{"@type":"Event","@id":"https://top-dynamos.github.io/william-sefekar/#jan17","name":"Bill Sefekar live at Wild Rover Brewing Company","startDate":"2027-01-17T18:00","name2":"A Tribute to John Denver","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"The Wild Rover Brewing Company","telephone":"+1-813-475-5995","address":{"@type":"PostalAddress","streetAddress":"13921 Lynmar Blvd","addressLocality":"Tampa","addressRegion":"FL","postalCode":"33626","addressCountry":"US"}},"performer":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}},{"@type":"PodcastEpisode","name":"TBCN Unplugged: The Bill Sefekar Experience","datePublished":"2026-05-14","url":"https://infoxvg.podbean.com/e/tbcn-unplugged-the-bill-sefekar-experience/","partOfSeries":{"@type":"PodcastSeries","name":"Tampa Bay Community Network Unplugged"},"about":{"@id":"https://top-dynamos.github.io/william-sefekar/#person"}}]}
 </script>
 
 <style>
@@ -107,6 +107,11 @@ nav a:hover{color:var(--teal)}
 /* On a phone the two hero buttons came out 153px and 346px wide, one narrow and one full
    bleed, which looked like a mistake rather than a choice. Both are now full width and
    stacked, and the portrait is centred instead of hanging off the left. */
+@media (max-width:700px){
+  /* floated beside the text, the cover squeezed the book title into a twelve character
+     column. On a phone it sits above the text instead. */
+  .book figure{float:none !important;width:150px !important;margin:0 0 18px !important}
+}
 @media (max-width:575px){
   /* the four word trail orphaned MUSIC onto a line of its own at 390 */
   .hero .where{font-size:.72rem;letter-spacing:.12em;text-wrap:balance;max-width:30ch}
@@ -248,7 +253,7 @@ footer a:hover{color:#fff}
   <div class="fig"><div class="n">170</div><div class="l">Television shows<br>produced</div></div>
   <div class="fig"><div class="n">17</div><div class="l">Years in the<br>classroom</div></div>
   <div class="fig"><div class="n">2</div><div class="l">Books published,<br>a third in progress</div></div>
-  <div class="fig"><div class="n">100+</div><div class="l">Recordings across<br>his two channels</div></div>
+  <div class="fig"><div class="n">100+</div><div class="l">Recordings on<br>his channel</div></div>
 </div></div>
 
 <section id="books">
@@ -271,6 +276,13 @@ footer a:hover{color:#fff}
     <div class="book">
       <div class="yr">2017</div>
       <div>
+        <figure style="float:right;width:190px;margin:0 0 18px 26px">
+          <img src="images/american-dreamer-cover.jpg"
+               srcset="images/american-dreamer-cover-800.jpg 420w, images/american-dreamer-cover.jpg 760w"
+               sizes="190px" width="760" height="1097" loading="lazy" decoding="async"
+               alt="The cover of American Dreamer, showing Joseph Sefekar in uniform against a United States flag"
+               style="width:100%;height:auto;display:block;border-radius:3px;box-shadow:0 10px 26px rgba(0,0,0,.18)">
+        </figure>
         <h3><em>American Dreamer: A Look Into the Life of My Father, Joe Baby</em></h3>
         <p>His father, Joseph Sefekar, was born in lower Manhattan, served with the First Army in the Second World War and was decorated with the Bronze Star. He spent thirty eight years in federal government, including as administrator on the Hirshhorn Museum and Sculpture Garden, and later as finance officer for Ruth Eckerd Hall in Clearwater. He was married to Thelma for more than sixty seven years.</p>
         <p>He worked on it with his father from 1997 to 2008, going through Joseph's own writing and keeping the memorabilia of a life that ran for almost a century.</p>
@@ -301,8 +313,11 @@ footer a:hover{color:#fff}
     <div>
       <span class="eyebrow">Music</span>
       <h2 class="h2">The Bill Sefekar Experience</h2>
-      <p class="lede">More than sixty broadcasts and over a hundred recordings across his two channels, The Bill Sefekar Experience and Mr. Bill's Adventures, alongside live performances of what he calls Mood Message Music at venues around Tampa Bay.</p>
+      <p class="lede">More than sixty broadcasts and over a hundred recordings on his channel, which began as Mr. Bill's Adventures and runs today as The Bill Sefekar Experience, alongside live performances of what he calls Mood Message Music at venues around Tampa Bay.</p>
       <p style="margin-top:22px"><a class="btn" href="https://www.youtube.com/@TheBillSefekarExperience" target="_blank" rel="noopener">Listen on YouTube</a></p>
+      <p class="lede" style="margin-top:22px">He also plays as one half of <b>Angels of Chaos</b>, with
+      David Kalin of the DK Studio in Tampa. Their own billing: &ldquo;Sometimes in tune, often out of sync,
+      and sometimes in sync and often out of tune.&rdquo;</p>
       <div class="pod">
         <p style="margin:0 0 12px;font-size:.95rem;color:var(--mid)"><b>TBCN Unplugged</b>, with John Casimiro. Tampa Bay Community Network, 14 May 2026.</p>
         <iframe src="https://www.podbean.com/player-v2/?i=atwri-1ac3b75" title="TBCN Unplugged: The Bill Sefekar Experience, an interview with Bill Sefekar" loading="lazy" allow="clipboard-write" allowfullscreen></iframe>
@@ -331,7 +346,7 @@ footer a:hover{color:#fff}
       </div>
       <div class="nation">
         <h3 style="font-size:1.1rem;margin-bottom:10px">Washington</h3>
-        <p>The book led to a reception at the Embassy of Israel in Washington, attended by ambassadors and dignitaries.</p>
+        <p>In January 2010 the Embassy of Israel in Washington held a reception honouring those ten countries, attended by the ambassadors of those nations.</p>
       </div>
       <div class="nation">
         <h3 style="font-size:1.1rem;margin-bottom:10px">Why it still matters</h3>
@@ -351,8 +366,10 @@ footer a:hover{color:#fff}
     <div>
       <span class="eyebrow">Next performance</span>
       <h2>Sunday 17 January 2027</h2>
-      <p class="where">Wild Rover Brewing Company, Tampa</p>
-      <p class="note">An evening of the Mood Message Music he has been playing around Tampa Bay for years. Songs, and the stories that go with them.</p>
+      <p class="where">A Tribute to John Denver, and other favourites</p>
+      <p class="note" style="margin-bottom:14px">Angels of Chaos, David Kalin and Bill Sefekar, with special guest Michael Chernoff. Two sets and nineteen songs, about two and a half hours, finishing on Sweet Caroline.</p>
+      <p class="note" style="margin-bottom:14px"><b style="color:#FBF8F1">6:00 PM</b> at The Wild Rover Brewing Company, 13921 Lynmar Blvd, Tampa, Florida 33626. The brewery takes bookings on <a href="tel:+18134755995" style="color:#FBF8F1">813 475 5995</a>.</p>
+      <p class="note">Admission at the door is twenty dollars, or fifteen with a copy of the announcement. Tickets are also on Eventbrite.</p>
     </div>
   </div>
 </section>
