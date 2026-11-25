@@ -112,6 +112,24 @@ nav a:hover{color:var(--teal)}
   .hero .btn.ghost{margin-left:0;margin-bottom:0}
   .hero-portrait img{margin:0 auto}
 }
+
+/* Phone refinements. His readers are his own contemporaries, on phones, often with tired
+   eyes, so the two things that actually matter here are tap size and the smallest labels.
+   Measured before changing: every nav link was a 21px tap target and the eyebrows were
+   10.88px. Desktop is untouched. */
+@media (max-width:720px){
+  nav a{padding:15px 0;line-height:1}          /* 21px tap target becomes 43px */
+}
+@media (max-width:575px){
+  .wordmark span{font-size:.69rem}             /* was 9.6px */
+  .eyebrow{font-size:.78rem;letter-spacing:.17em;margin-bottom:12px}   /* was 10.88px */
+  .where{font-size:.84rem;line-height:2}       /* was 12.16px, and it wrapped badly */
+  .btn{font-size:.84rem;padding:17px 28px}     /* was 12.48px */
+  .meta,.quote-by{font-size:.92rem}            /* was 13.1 to 13.9px */
+  .lede{font-size:1.08rem}
+  .reach a,.pod a{display:inline-block;padding:9px 0}   /* phone, email and the episode link */
+  .offers li{padding:4px 0}
+}
 .hero .eyebrow{color:#C9A878}
 .hero h1{color:#FBF8F1;font-size:clamp(2.3rem,6vw,4rem);line-height:1.04;letter-spacing:-.02em;margin-bottom:22px}
 .hero h1 em{font-style:italic;color:#D8C9A8}
