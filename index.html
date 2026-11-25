@@ -108,6 +108,8 @@ nav a:hover{color:var(--teal)}
    bleed, which looked like a mistake rather than a choice. Both are now full width and
    stacked, and the portrait is centred instead of hanging off the left. */
 @media (max-width:575px){
+  /* the four word trail orphaned MUSIC onto a line of its own at 390 */
+  .hero .where{font-size:.72rem;letter-spacing:.12em;text-wrap:balance;max-width:30ch}
   .hero .btn{display:block;width:100%;text-align:center;margin:0 0 12px}
   .hero .btn.ghost{margin-left:0;margin-bottom:0}
   .hero-portrait img{margin:0 auto}
@@ -164,6 +166,14 @@ nav a:hover{color:var(--teal)}
 .band .wrap{position:relative;z-index:2}
 .band.studio{background-image:url("images/studio.jpg")}
 .band.bay{background-image:url("images/bay.jpg")}
+/* A phone was pulling 1600px wide photographs for a 390px screen, about a megabyte of it.
+   Below 860 it gets the 800px versions instead, which is the same picture at a third of
+   the weight. */
+@media (max-width:860px){
+  .hero-img{background-image:url("images/hero-800.jpg")}
+  .band.studio{background-image:url("images/studio-800.jpg")}
+  .band.bay{background-image:url("images/bay-800.jpg")}
+}
 .band h2{color:#FBF8F1;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.28;max-width:22ch}
 .band p{color:#C7C2B6;font-size:1.05rem;line-height:1.74;max-width:56ch;margin:20px 0 0}
 .band .eyebrow{color:#C9A878}
@@ -238,7 +248,7 @@ footer a:hover{color:#fff}
   <div class="fig"><div class="n">170</div><div class="l">Television shows<br>produced</div></div>
   <div class="fig"><div class="n">17</div><div class="l">Years in the<br>classroom</div></div>
   <div class="fig"><div class="n">2</div><div class="l">Books published,<br>a third in progress</div></div>
-  <div class="fig"><div class="n">140</div><div class="l">Recordings on<br>his channel</div></div>
+  <div class="fig"><div class="n">100+</div><div class="l">Recordings across<br>his two channels</div></div>
 </div></div>
 
 <section id="books">
@@ -247,7 +257,7 @@ footer a:hover{color:#fff}
     <h2 class="h2">Two published, one in progress</h2>
     <p class="lede" style="margin-bottom:34px">Both published books are about somebody else. That is not an accident.</p>
 
-    <div class="frame" style="margin:0 0 42px"><img src="images/books.jpg" width="1600" height="900" alt="Bill Sefekar with one of his books" loading="lazy"></div>
+    <div class="frame" style="margin:0 0 42px"><img src="images/books.jpg" srcset="images/books-800.jpg 800w, images/books.jpg 1600w" sizes="(max-width:860px) 100vw, 1200px" width="1600" height="900" alt="Bill Sefekar with one of his books" loading="lazy"></div>
 
     <div class="book">
       <div class="yr">2010</div>
@@ -299,7 +309,7 @@ footer a:hover{color:#fff}
         <p style="margin:12px 0 0;font-size:.9rem"><a href="https://infoxvg.podbean.com/e/tbcn-unplugged-the-bill-sefekar-experience/" target="_blank" rel="noopener">Open the episode page</a></p>
       </div>
     </div>
-    <div class="frame"><img src="images/music.jpg" width="1600" height="900" alt="Bill Sefekar at his recording microphone" loading="lazy"></div>
+    <div class="frame"><img src="images/music.jpg" srcset="images/music-800.jpg 800w, images/music.jpg 1600w" sizes="(max-width:860px) 100vw, 1200px" width="1600" height="900" alt="Bill Sefekar at his recording microphone" loading="lazy"></div>
   </div>
 </section>
 
@@ -349,7 +359,7 @@ footer a:hover{color:#fff}
 
 <section id="teaching">
   <div class="wrap split">
-    <div class="frame"><img src="images/library.jpg" width="1600" height="900" alt="A small community library" loading="lazy"></div>
+    <div class="frame"><img src="images/library.jpg" srcset="images/library-800.jpg 800w, images/library.jpg 1600w" sizes="(max-width:860px) 100vw, 1200px" width="1600" height="900" alt="A small community library" loading="lazy"></div>
     <div>
       <span class="eyebrow">Teaching</span>
       <h2 class="h2">Seventeen years, every grade level</h2>
@@ -362,7 +372,7 @@ footer a:hover{color:#fff}
 
 <section class="tint">
   <div class="wrap split">
-    <div class="frame"><img src="images/bill.jpg" width="760" height="1015" alt="Bill Sefekar" loading="lazy"></div>
+    <div class="frame"><img src="images/bill.jpg" srcset="images/bill-800.jpg 520w, images/bill.jpg 760w" sizes="(max-width:860px) 100vw, 760px" width="760" height="1015" alt="Bill Sefekar" loading="lazy"></div>
     <div>
       <p class="quote">You can do it.</p>
       <p class="quote-by">What he says to students, and to audiences</p>
